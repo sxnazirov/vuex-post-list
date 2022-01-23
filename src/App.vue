@@ -11,16 +11,10 @@
 import {mapGetters, mapActions} from 'vuex'
 export default {
   name: 'App',
-  // computed: {
-  //   allPosts() {
-  //     return this.$store.getters.allPosts;
-  //   }
-  // },
   computed: mapGetters(["allPosts"]),
   methods: mapActions(['fetchPosts']),
   async mounted() {
-    // this.$store.dispatch("fetchPosts")
-    this.fetchPosts();
+    this.$store.dispatch("fetchPosts")
   }
 }
 </script>
